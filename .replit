@@ -38,3 +38,5 @@ start = "svelteserver --stdio"
 
 [extension]
 isExtension = true
+buildCommand = "npm run build"
+outputDirectory = "build"
