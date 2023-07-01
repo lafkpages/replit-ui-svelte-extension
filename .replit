@@ -35,3 +35,6 @@ pattern = "**/{*.svelte}"
 
 [languages.svelte.languageServer]
 start = "svelteserver --stdio"
+
+[extension]
+isExtension = true
