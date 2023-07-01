@@ -40,3 +40,4 @@ start = "svelteserver --stdio"
 isExtension = true
 buildCommand = "npm run build"
 outputDirectory = "build"
+extensionID = "0608542a-03fc-49ba-83d3-736bd0aa2791"
