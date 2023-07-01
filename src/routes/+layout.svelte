@@ -1,10 +1,13 @@
 <script>
   import '@replit-svelte/ui/index.css';
+  import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
 </script>
 
-<main>
-  <slot />
-</main>
+<ModalProvider>
+  <main>
+    <slot />
+  </main>
+</ModalProvider>
 
 <style>
   main {
