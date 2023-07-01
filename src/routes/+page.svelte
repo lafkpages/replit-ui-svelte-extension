@@ -7,6 +7,6 @@
 
 <Button text="My button" on:click={() => {
   showModal({
-    text: 'Button clicked'
+    title: 'Button clicked'
   });
 }} />
