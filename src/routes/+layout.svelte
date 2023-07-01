@@ -2,4 +2,12 @@
   import '@replit-svelte/ui/index.css';
 </script>
 
-<slot />
+<main>
+  <slot />
+</main>
+
+<style>
+  main {
+    padding: var(--space-32);
+  }
+</style>
