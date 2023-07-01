@@ -1,5 +1,9 @@
 {
   "name": "Replit UI Svelte Extension",
   "description": "A template for a Replit Extension that uses @replit-svelte/ui for Replit-like components.",
-  "longDescription": "A template for a Replit Extension that uses `@replit-svelte/ui` for Replit-like components."
+  "longDescription": "A template for a Replit Extension that uses `@replit-svelte/ui` for Replit-like components.",
+  "tools": [{
+    "name": "Replit UI Svelte",
+    "handler": "/"
+  }]
 }
