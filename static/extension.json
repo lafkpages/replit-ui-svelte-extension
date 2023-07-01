@@ -6,5 +6,11 @@
   "tools": [{
     "name": "Replit UI Svelte",
     "handler": "/"
+  }],
+  "fileHandlers": [{
+    "name": "Replit UI Svelte",
+    "icon": "/favicon.png",
+    "handler": "/fileHandler",
+    "glob": "**/*"
   }]
 }
