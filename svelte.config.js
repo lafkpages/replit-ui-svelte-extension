@@ -16,7 +16,6 @@ const config = {
       strict: true
     }),
     prerender: {
-      entries: ['/', '/fileHandler'],
       handleHttpError: 'warn'
     }
 	}
