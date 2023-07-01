@@ -1,1 +1,1 @@
-<h1>Replit UI Svelte Extension</h1>
+<h1 class="headerBig">Replit UI Svelte Extension</h1>
