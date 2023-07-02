@@ -4,7 +4,7 @@
   import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
   import Loader from '@replit-svelte/ui/icons/Loader.svelte';
 
-  import { init, me, HandshakeStatus } from '@replit/extensions';
+  import { init, me, themes, HandshakeStatus } from '@replit/extensions';
   import type { ReplitInitOutput } from '@replit/extensions';
 
   import { onMount, onDestroy, setContext } from 'svelte';
@@ -27,6 +27,18 @@
             filePath.set(file);
           })
           .catch(console.error);
+
+        themes.getCurrentThemeValues().then((themeValues) => {
+          for (const [key, value] of Object.entries(themeValues)) {
+            if (key == '__typename') {
+              continue;
+            }
+
+            document.documentElement.style.setProperty(`--${
+              key.replace(/([A-Z])/g, '-$1').toLowerCase()
+            }`, value);
+          }
+        });
       })
       .catch((err) => {
         console.error('Error init()ing the Replit Extensions API:', err);
