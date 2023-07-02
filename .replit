@@ -1,7 +1,16 @@
 run = "npm run dev"
 entrypoint = "src/routes/+page.svelte"
 
-hidden = [".config", "tsconfig.json", "tsconfig.node.json", "vite.config.js", ".gitignore", ".svelte-kit", "build", ".npmrc"]
+hidden = [
+  ".config",
+  "tsconfig.json",
+  "tsconfig.node.json",
+  "vite.config.js",
+  ".gitignore",
+  ".svelte-kit",
+  "build",
+  ".npmrc"
+]
 
 [nix]
 channel = "stable-22_11"
