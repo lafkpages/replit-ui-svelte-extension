@@ -3,7 +3,7 @@
   import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
   import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
 
-  import { init } from '@replit/extensions';
+  import { init, HandshakeStatus } from '@replit/extensions';
   import type { ReplitInitOutput } from '@replit/extensions';
 
   import { onMount, onDestroy } from 'svelte';
@@ -30,7 +30,14 @@
 <ModalProvider>
   <ToastProvider>
     <main>
-      <slot />
+      {#if handshakeResult?.status == HandshakeStatus.Ready}
+        <slot />
+      {:else}
+        <h1 class="headerBig">Handshake Error</h1>
+        <p>
+          We couldn't connect to the Replit workspace. Make sure you're running this as an extension.
+        </p>
+      {/if}
     </main>
   </ToastProvider>
 </ModalProvider>
