@@ -3,5 +3,8 @@
 cd scripts
 
 for file in *; do
-  ln -s `realpath "$file"` "../.config/bin/${file:0:-3}"
+  dest=`realpath "../.config/bin/${file:0:-3}"`
+  if [ ! -f "$dest" ]; then
+    ln -s `realpath "$file"` "$dest"
+  fi
 done
