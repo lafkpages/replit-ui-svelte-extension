@@ -1,12 +1,15 @@
 <script>
   import '@replit-svelte/ui/index.css';
   import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
+  import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
 </script>
 
 <ModalProvider>
-  <main>
-    <slot />
-  </main>
+  <ToastProvider>
+    <main>
+      <slot />
+    </main>
+  </ToastProvider>
 </ModalProvider>
 
 <style>
