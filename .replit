@@ -50,6 +50,6 @@ start = "svelteserver --stdio"
 
 [extension]
 isExtension = true
-buildCommand = "disableSvelteServer; npm run build; enableSvelteServer"
+buildCommand = "./scripts/build.sh"
 outputDirectory = "build"
 extensionID = "0608542a-03fc-49ba-83d3-736bd0aa2791"
