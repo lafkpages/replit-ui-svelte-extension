@@ -1,10 +1,9 @@
 <script lang="ts">
   import { getContext } from 'svelte';
-  import type { Writable } from 'svelte/store';
-  import type { FileHandlerPath } from '$lib/types';
+  import type { FileHandlerPathStore } from '$lib/types';
 
   // File handler file path
-  const filePath = getContext<Writable<FileHandlerPath>>('filePath');
+  const filePath = getContext<FileHandlerPathStore>('filePath');
 </script>
 
 This is a file handler. You selected the file:

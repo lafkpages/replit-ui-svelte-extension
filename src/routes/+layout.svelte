@@ -9,13 +9,12 @@
 
   import { onMount, onDestroy, setContext } from 'svelte';
   import { writable } from 'svelte/store';
-  import type { Writable } from 'svelte/store';
-  import type { FileHandlerPath } from '$lib/types';
+  import type { FileHandlerPathStore } from '$lib/types';
 
   let handshakeResult: ReplitInitOutput | null = null;
-  let filePath: Writable<FileHandlerPath> = writable(null);
+  let filePath: FileHandlerPathStore = writable(null);
 
-  setContext<Writable<FileHandlerPath>>('filePath', filePath);
+  setContext<FileHandlerPathStore>('filePath', filePath);
 
   onMount(() => {
     init()
