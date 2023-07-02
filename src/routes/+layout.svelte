@@ -15,13 +15,15 @@
       .then(res => {
         handshakeResult = res;
 
-        onDestroy(res.dispose);
-
         console.debug(res);
       })
       .catch(err => {
         console.error('Error init()ing the Replit Extensions API:', err);
       });
+  });
+
+  onDestroy(() => {
+    handshakeResult?.dispose();
   });
 </script>
 
