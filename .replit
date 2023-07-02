@@ -9,7 +9,8 @@ hidden = [
   ".gitignore",
   ".svelte-kit",
   "build",
-  ".npmrc"
+  ".npmrc",
+  "package-lock.json"
 ]
 
 [nix]
