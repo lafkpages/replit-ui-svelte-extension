@@ -1,13 +1,14 @@
-<script>
+<script lang="ts">
   import '@replit-svelte/ui/index.css';
   import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
   import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
 
   import { init } from '@replit/extensions';
+  import type { ReplitInitOutput } from '@replit/extensions';
 
   import { onMount, onDestroy } from 'svelte';
 
-  let handshakeResult = null;
+  let handshakeResult: ReplitInitOutput | null = null;
 
   onMount(() => {
     init()
