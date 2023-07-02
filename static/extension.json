@@ -1,5 +1,6 @@
 {
   "name": "Replit UI Svelte Extension",
+  "version": "0",
   "description": "A template for a Replit Extension that uses @replit-svelte/ui for Replit-like components.",
   "longDescription": "A template for a Replit Extension that uses `@replit-svelte/ui` for Replit-like components.",
   "icon": "/favicon.svg",
