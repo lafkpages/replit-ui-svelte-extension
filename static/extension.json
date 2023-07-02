@@ -16,5 +16,9 @@
       "handler": "/fileHandler",
       "glob": "**/*"
     }
-  ]
+  ],
+  "coverImages": [{
+    "path": "/cover.png",
+    "label": "preview of extension"
+  }]
 }
