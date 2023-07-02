@@ -1,6 +1,7 @@
 <script>
   import Button from '@replit-svelte/ui/Button.svelte';
-  import { showModal } from '@replit-svelte/utils';
+  import Plus from '@replit-svelte/ui/icons/Plus.svelte';
+  import { showModal, showToast } from '@replit-svelte/utils';
 </script>
 
 <h1 class="headerBig">Replit UI Svelte Extension</h1>
@@ -14,3 +15,13 @@
     });
   }}
 />
+
+<Button variant="teal" on:click={() => {
+  showToast({
+    text: 'Example toast',
+    variant: 'teal'
+  });
+}}>
+  <Plus />
+  Show toast
+</Button>
