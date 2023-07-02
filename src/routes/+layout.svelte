@@ -5,7 +5,7 @@
 
   import { init } from '@replit/extensions';
 
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
 
   let handshakeResult = null;
 
@@ -13,6 +13,8 @@
     init()
       .then(res => {
         handshakeResult = res;
+
+        onDestroy(res.dispose);
 
         console.debug(res);
       })
