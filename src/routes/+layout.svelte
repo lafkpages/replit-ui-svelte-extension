@@ -7,10 +7,15 @@
   import { init, me, HandshakeStatus } from '@replit/extensions';
   import type { ReplitInitOutput } from '@replit/extensions';
 
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, setContext } from 'svelte';
 
   let handshakeResult: ReplitInitOutput | null = null;
-  let filePath: string | null | undefined = null;
+  type FilePath = string | null | undefined;
+  let filePath: FilePath = null;
+
+  setContext<() => FilePath>('filePath', () => {
+    return filePath;
+  });
 
   onMount(() => {
     init()
