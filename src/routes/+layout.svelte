@@ -10,6 +10,7 @@
   import { onMount, onDestroy, setContext } from 'svelte';
   import { writable } from 'svelte/store';
 
+  import { applyThemeValues } from '$lib/themes';
   import type { FileHandlerPathStore } from '$lib/types';
 
   let handshakeResult: ReplitInitOutput | null = null;
@@ -28,17 +29,7 @@
           })
           .catch(console.error);
 
-        themes.getCurrentThemeValues().then((themeValues) => {
-          for (const [key, value] of Object.entries(themeValues)) {
-            if (key == '__typename') {
-              continue;
-            }
-
-            document.documentElement.style.setProperty(`--${
-              key.replace(/([A-Z])/g, '-$1').toLowerCase()
-            }`, value);
-          }
-        });
+        themes.getCurrentThemeValues().then(applyThemeValues);
       })
       .catch((err) => {
         console.error('Error init()ing the Replit Extensions API:', err);
