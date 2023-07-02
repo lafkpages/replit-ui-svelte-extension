@@ -9,6 +9,7 @@
 
   import { onMount, onDestroy, setContext } from 'svelte';
   import { writable } from 'svelte/store';
+
   import type { FileHandlerPathStore } from '$lib/types';
 
   let handshakeResult: ReplitInitOutput | null = null;
