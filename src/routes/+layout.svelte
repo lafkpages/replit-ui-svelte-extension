@@ -2,6 +2,24 @@
   import '@replit-svelte/ui/index.css';
   import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
   import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
+
+  import { init } from '@replit/extensions';
+
+  import { onMount } from 'svelte';
+
+  let handshakeResult = null;
+
+  onMount(() => {
+    init()
+      .then(res => {
+        handshakeResult = res;
+
+        console.debug(res);
+      })
+      .catch(err => {
+        console.error('Error init()ing the Replit Extensions API:', err);
+      });
+  });
 </script>
 
 <ModalProvider>
