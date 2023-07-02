@@ -14,16 +14,18 @@
 
   onMount(() => {
     init()
-      .then(res => {
+      .then((res) => {
         handshakeResult = res;
 
         console.debug(res);
 
-        me.filePath().then(file => {
-          filePath = file;
-        }).catch(console.error);
+        me.filePath()
+          .then((file) => {
+            filePath = file;
+          })
+          .catch(console.error);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Error init()ing the Replit Extensions API:', err);
       });
   });
@@ -39,7 +41,8 @@
       {#if handshakeResult?.status == HandshakeStatus.Error || filePath === undefined}
         <h1 class="headerBig">Handshake Error</h1>
         <p>
-          We couldn't connect to the Replit workspace. Make sure you're running this as an extension.
+          We couldn't connect to the Replit workspace. Make sure you're running
+          this as an extension.
         </p>
       {:else if handshakeResult?.status == HandshakeStatus.Ready}
         <slot />
