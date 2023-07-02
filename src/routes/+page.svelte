@@ -20,7 +20,7 @@
 
 <Button
   variant="teal"
-  on:click={() => {
+  on:click={async () => {
     // Toast inside this pane
     showToast({
       text: 'Example toast 1',
@@ -28,7 +28,7 @@
     });
 
     // Toast outside this pane
-    messages.showNotice('Example toast 2');
+    await messages.showNotice('Example toast 2');
   }}
 >
   <Plus />
