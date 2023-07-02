@@ -1,20 +1,11 @@
 <script lang="ts">
-  // Replit Extensions API
-  import { me } from '@replit/extensions';
+  import { getContext } from 'svelte';
+  import type { Writable } from 'svelte/store';
+
+  // File handler file path
+  type FilePath = string | null | undefined;
+  const filePath = getContext<Writable<FilePath>>('filePath');
 </script>
 
 This is a file handler. You selected the file:
-
-{#await me?.filePath()}
-  <i>Loading file</i>
-{:then file}
-  <code>{file}</code>
-{:catch error}
-  <i>
-    Unexpected error:
-
-    <code>
-      {error}
-    </code>
-  </i>
-{/await}
+<code>{$filePath}</code>

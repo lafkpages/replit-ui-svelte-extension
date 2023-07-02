@@ -8,14 +8,14 @@
   import type { ReplitInitOutput } from '@replit/extensions';
 
   import { onMount, onDestroy, setContext } from 'svelte';
+  import { writable } from 'svelte/store';
+  import type { Writable } from 'svelte/store';
 
   let handshakeResult: ReplitInitOutput | null = null;
   type FilePath = string | null | undefined;
-  let filePath: FilePath = null;
+  let filePath: Writable<FilePath> = writable(null);
 
-  setContext<() => FilePath>('filePath', () => {
-    return filePath;
-  });
+  setContext<Writable<FilePath>>('filePath', filePath);
 
   onMount(() => {
     init()
@@ -26,7 +26,7 @@
 
         me.filePath()
           .then((file) => {
-            filePath = file;
+            filePath.set(file);
           })
           .catch(console.error);
       })
@@ -49,7 +49,7 @@
           We couldn't connect to the Replit workspace. Make sure you're running
           this as an extension.
         </p>
-      {:else if handshakeResult?.status == HandshakeStatus.Ready}
+      {:else if handshakeResult?.status == HandshakeStatus.Ready && filePath !== undefined}
         <slot />
       {:else}
         <div class="handshakeLoading">
