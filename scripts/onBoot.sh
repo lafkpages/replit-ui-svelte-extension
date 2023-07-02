@@ -8,3 +8,7 @@ for file in *; do
     ln -s `realpath "$file"` "$dest"
   fi
 done
+cd ..
+
+# Remove temp. Vite files
+rm vite.config.js.timestamp-*
