@@ -22,8 +22,6 @@
       .then((res) => {
         handshakeResult = res;
 
-        console.debug(res);
-
         me.filePath()
           .then((file) => {
             filePath.set(file);
