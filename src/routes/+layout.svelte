@@ -39,7 +39,9 @@
           We couldn't connect to the Replit workspace. Make sure you're running this as an extension.
         </p>
       {:else}
-        <Loader />
+        <div class="handshakeLoading">
+          <Loader />
+        </div>
       {/if}
     </main>
   </ToastProvider>
@@ -51,5 +53,11 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
+    width: 100%;
+    height: 100%;
+  }
+
+  .handshakeLoading {
+    margin: auto;
   }
 </style>
