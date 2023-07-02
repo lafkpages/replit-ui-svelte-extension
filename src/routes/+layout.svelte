@@ -2,6 +2,7 @@
   import '@replit-svelte/ui/index.css';
   import ModalProvider from '@replit-svelte/ui/ModalProvider.svelte';
   import ToastProvider from '@replit-svelte/ui/ToastProvider.svelte';
+  import Loader from '@replit-svelte/ui/icons/Loader.svelte';
 
   import { init, HandshakeStatus } from '@replit/extensions';
   import type { ReplitInitOutput } from '@replit/extensions';
@@ -32,11 +33,13 @@
     <main>
       {#if handshakeResult?.status == HandshakeStatus.Ready}
         <slot />
-      {:else}
+      {:else if handshakeResult?.status == HandshakeStatus.Error}
         <h1 class="headerBig">Handshake Error</h1>
         <p>
           We couldn't connect to the Replit workspace. Make sure you're running this as an extension.
         </p>
+      {:else}
+        <Loader />
       {/if}
     </main>
   </ToastProvider>
