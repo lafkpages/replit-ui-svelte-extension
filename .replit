@@ -10,7 +10,8 @@ hidden = [
   ".svelte-kit",
   "build",
   ".npmrc",
-  "package-lock.json"
+  "package-lock.json",
+  ".prettier*"
 ]
 
 [nix]
