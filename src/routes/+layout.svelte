@@ -71,6 +71,10 @@
 </ModalProvider>
 
 <style>
+  :global(:root), :global(body) {
+    background-color: var(--background-default) !important;
+  }
+
   main {
     padding: var(--space-32);
     display: flex;
