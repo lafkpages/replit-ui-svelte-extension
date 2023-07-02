@@ -5,9 +5,12 @@
 
 <h1 class="headerBig">Replit UI Svelte Extension</h1>
 
-<Button text="My button" on:click={() => {
-  showModal({
-    title: 'Button clicked',
-    text: 'This is a demo Modal text'
-  });
-}} />
+<Button
+  text="My button"
+  on:click={() => {
+    showModal({
+      title: 'Button clicked',
+      text: 'This is a demo Modal text',
+    });
+  }}
+/>

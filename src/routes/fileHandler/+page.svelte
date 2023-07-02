@@ -12,7 +12,7 @@ This is a file handler. You selected the file:
 {:catch error}
   <i>
     Unexpected error:
-    
+
     <code>
       {error}
     </code>
