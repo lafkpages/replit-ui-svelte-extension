@@ -18,16 +18,19 @@
   }}
 />
 
-<Button variant="teal" on:click={() => {
-  // Toast inside this pane
-  showToast({
-    text: 'Example toast 1',
-    variant: 'teal'
-  });
+<Button
+  variant="teal"
+  on:click={() => {
+    // Toast inside this pane
+    showToast({
+      text: 'Example toast 1',
+      variant: 'teal',
+    });
 
-  // Toast outside this pane
-  messages.showNotice('Example toast 2');
-}}>
+    // Toast outside this pane
+    messages.showNotice('Example toast 2');
+  }}
+>
   <Plus />
   Show toast
 </Button>
