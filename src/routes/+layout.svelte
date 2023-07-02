@@ -5,7 +5,7 @@
   import Loader from '@replit-svelte/ui/icons/Loader.svelte';
 
   import { init, me, themes, HandshakeStatus } from '@replit/extensions';
-  import type { ReplitInitOutput } from '@replit/extensions';
+  import type { ReplitInitOutput, DisposerFunction } from '@replit/extensions';
 
   import { onMount, onDestroy, setContext } from 'svelte';
   import { writable } from 'svelte/store';
@@ -17,6 +17,8 @@
   let filePath: FileHandlerPathStore = writable(null);
 
   setContext<FileHandlerPathStore>('filePath', filePath);
+
+  let onThemeChangeValuesDisposer: DisposerFunction | null = null;
 
   onMount(() => {
     init()
@@ -30,6 +32,9 @@
           .catch(console.error);
 
         themes.getCurrentThemeValues().then(applyThemeValues);
+        themes.onThemeChangeValues(applyThemeValues).then((disposer) => {
+          onThemeChangeValuesDisposer = disposer;
+        });
       })
       .catch((err) => {
         console.error('Error init()ing the Replit Extensions API:', err);
@@ -38,6 +43,7 @@
 
   onDestroy(() => {
     handshakeResult?.dispose();
+    onThemeChangeValuesDisposer?.();
   });
 </script>
 
