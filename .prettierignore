@@ -9,3 +9,4 @@ dist
 .svelte-kit
 node_modules
 .breakpoints
+vite.config.js.timestamp-*
