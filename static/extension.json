@@ -13,7 +13,7 @@
   "fileHandlers": [
     {
       "name": "Replit UI Svelte",
-      "icon": "/favicon.png",
+      "icon": "/favicon.svg",
       "handler": "/fileHandler",
       "glob": "**/*"
     }
