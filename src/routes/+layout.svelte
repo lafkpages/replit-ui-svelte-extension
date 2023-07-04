@@ -8,15 +8,11 @@
   import type { ReplitInitOutput, DisposerFunction } from '@replit/extensions';
 
   import { onMount, onDestroy, setContext } from 'svelte';
-  import { writable } from 'svelte/store';
 
   import { applyThemeValues } from '$lib/themes';
-  import type { FileHandlerPathStore } from '$lib/types';
+  import { fileHandlerPath } from '$lib/stores';
 
   let handshakeResult: ReplitInitOutput | null = null;
-  let filePath: FileHandlerPathStore = writable(null);
-
-  setContext<FileHandlerPathStore>('filePath', filePath);
 
   let onThemeChangeValuesDisposer: DisposerFunction | null = null;
 
@@ -27,7 +23,7 @@
 
         me.filePath()
           .then((file) => {
-            filePath.set(file);
+            $fileHandlerPath = file;
           })
           .catch(console.error);
 
@@ -50,13 +46,13 @@
 <ModalProvider>
   <ToastProvider>
     <main>
-      {#if handshakeResult?.status == HandshakeStatus.Error || filePath === undefined}
+      {#if handshakeResult?.status == HandshakeStatus.Error || $fileHandlerPath === undefined}
         <h1 class="headerBig">Handshake Error</h1>
         <p>
           We couldn't connect to the Replit workspace. Make sure you're running
           this as an extension.
         </p>
-      {:else if handshakeResult?.status == HandshakeStatus.Ready && filePath !== undefined}
+      {:else if handshakeResult?.status == HandshakeStatus.Ready && $fileHandlerPath !== undefined}
         <slot />
       {:else}
         <div class="handshakeLoading">

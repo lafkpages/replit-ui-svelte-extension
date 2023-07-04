@@ -5,14 +5,14 @@
   import type { FileHandlerPathStore } from '$lib/types';
 
   // File handler file path
-  const filePath = getContext<FileHandlerPathStore>('filePath');
+  import { fileHandlerPath } from '$lib/stores';
 </script>
 
 This is a file handler.
 
-{#if $filePath}
+{#if $fileHandlerPath}
   You selected the file:
-  <Input value={$filePath} disabled />
+  <Input value={$fileHandlerPath} disabled />
 {:else}
   You haven't selected a file.
 {/if}
