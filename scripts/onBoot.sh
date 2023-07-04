@@ -12,3 +12,8 @@ cd ..
 
 # Remove temp. Vite files
 rm vite.config.js.timestamp-*
+
+# When Repl forked, remove Git repository
+if [ ! "$REPL_ID" = "a8014928-cebd-467c-8357-285415275aba" ]; then
+  rm -rf .git
+fi
