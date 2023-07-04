@@ -5,7 +5,7 @@ cd scripts
 for file in *; do
   dest=`realpath "../.config/bin/${file:0:-3}"`
   if [ ! -f "$dest" ]; then
-    ln -s `realpath "$file"` "$dest"
+    ln -s "../../scripts/$file" "$dest"
   fi
 done
 cd ..
