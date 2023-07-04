@@ -60,6 +60,16 @@
         </div>
       {/if}
     </main>
+
+    <!--
+      If you want to allow the extension to run as a
+      normal website, outside of the Replit IDE,
+      replace the above <main> tag with the following:
+
+      <main>
+        <slot />
+      </main>
+    -->
   </ToastProvider>
 </ModalProvider>
 
