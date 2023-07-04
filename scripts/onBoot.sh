@@ -16,4 +16,5 @@ rm vite.config.js.timestamp-*
 # When Repl forked, remove Git repository
 if [ ! "$REPL_ID" = "a8014928-cebd-467c-8357-285415275aba" ]; then
   rm -rf ".git"
+  echo "1" > /tmp/_replit_ui_svelte_extension_forked
 fi
