@@ -6,8 +6,9 @@ export function applyThemeValues(themeValues: ThemeValuesGlobal) {
       continue;
     }
 
-    document.documentElement.style.setProperty(`--${
-      key.replace(/([A-Z])/g, '-$1').toLowerCase()
-    }`, value);
+    document.documentElement.style.setProperty(
+      `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
+      value
+    );
   }
 }

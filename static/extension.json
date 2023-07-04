@@ -18,8 +18,10 @@
       "glob": "**/*"
     }
   ],
-  "coverImages": [{
-    "path": "/cover.png",
-    "label": "preview of extension"
-  }]
+  "coverImages": [
+    {
+      "path": "/cover.png",
+      "label": "preview of extension"
+    }
+  ]
 }

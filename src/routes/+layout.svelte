@@ -64,7 +64,8 @@
 </ModalProvider>
 
 <style>
-  :global(:root), :global(body) {
+  :global(:root),
+  :global(body) {
     background-color: var(--background-default) !important;
   }
 
