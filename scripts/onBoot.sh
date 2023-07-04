@@ -13,8 +13,11 @@ cd ..
 # Remove temp. Vite files
 rm vite.config.js.timestamp-*
 
-# When Repl forked, remove Git repository
+# On fork
 if [ ! "$REPL_ID" = "a8014928-cebd-467c-8357-285415275aba" ]; then
-  rm -rf ".git"
-  echo "1" > /tmp/_replit_ui_svelte_extension_forked
+  onForkScript="$REPL_HOME/scripts/onFork.sh"
+  if [ -f "$onForkScript" ]; then
+    "$onForkScript"
+    rm "$onForkScript"
+  fi
 fi
