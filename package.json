@@ -24,7 +24,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@replit-svelte/ui": "^1.0.9",
+    "@replit-svelte/ui": "^1.4.2",
     "@replit-svelte/utils": "^1.1.0",
     "@replit/extensions": "^1.7.2"
   }
