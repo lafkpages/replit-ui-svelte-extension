@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@replit-svelte/types':
+    specifier: ^1.4.1
+    version: 1.4.1(@replit-svelte/ui@1.4.5)(svelte@3.59.2)
   '@replit-svelte/ui':
     specifier: ^1.4.5
     version: 1.4.5(svelte@3.59.2)
