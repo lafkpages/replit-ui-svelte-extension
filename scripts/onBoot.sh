@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+cd "$REPL_HOME"
+
+mkdir -p ".config/bin"
+
 # Symlink scripts into .config/bin, which should be in PATH
 cd scripts
 for file in *; do
-  dest=`realpath "../.config/bin/${file:0:-3}"`
+  dest="$REPL_HOME/.config/bin/${file:0:-3}"
   if [ ! -f "$dest" ]; then
     ln -s "../../scripts/$file" "$dest"
   fi
