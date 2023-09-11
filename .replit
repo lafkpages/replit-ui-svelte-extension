@@ -1,6 +1,6 @@
+compile = "./scripts/onBoot.sh"
 run = "pnpm run dev"
 entrypoint = "src/routes/+page.svelte"
-onBoot = "./scripts/onBoot.sh"
 
 hidden = [
   ".config",
