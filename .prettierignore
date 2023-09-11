@@ -10,3 +10,4 @@ dist
 node_modules
 .breakpoints
 vite.config.js.timestamp-*
+pnpm-lock.yaml
