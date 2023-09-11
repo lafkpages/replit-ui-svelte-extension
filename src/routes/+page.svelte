@@ -6,6 +6,10 @@
   import { messages } from '@replit/extensions';
 </script>
 
+<svelte:head>
+  <title>Replit UI Svelte Extension</title>
+</svelte:head>
+
 <h1 class="headerBig">Replit UI Svelte Extension</h1>
 
 <Button
