@@ -19,12 +19,12 @@
 />
 
 <Button
-  variant="teal"
+  variant="primary"
   on:click={async () => {
     // Toast inside this pane
     showToast({
       text: 'Example toast 1',
-      variant: 'teal',
+      variant: 'primary',
     });
 
     // Toast outside this pane
