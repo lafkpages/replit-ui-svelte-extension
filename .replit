@@ -1,4 +1,4 @@
-run = "npm run dev"
+run = "pnpm run dev"
 entrypoint = "src/routes/+page.svelte"
 onBoot = "./scripts/onBoot.sh"
 
@@ -11,7 +11,7 @@ hidden = [
   ".svelte-kit",
   "build",
   ".npmrc",
-  "package-lock.json",
+  "pnpm-lock.yaml",
   ".prettier*"
 ]
 
@@ -19,15 +19,17 @@ hidden = [
 channel = "stable-22_11"
 
 [env]
-PATH = "$REPL_HOME/.config/npm/node_global/bin:$REPL_HOME/node_modules/.bin:$REPL_HOME/.config/bin"
 XDG_CONFIG_HOME = "$REPL_HOME/.config"
-npm_config_prefix = "$REPL_HOME/.config/npm/node_global"
+npm_config_prefix = "$XDG_CONFIG_HOME/npm/node_global"
+PATH = "$npm_config_prefix/bin:$REPL_HOME/node_modules/.bin"
+PNPM_HOME = "$XDG_CONFIG_HOME/pnpm"
+ADAPTER = "node"
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", ".config"]
 
 [packager]
-language = "nodejs"
+language = "nodejs-pnpm"
 
   [packager.features]
   packageSearch = true

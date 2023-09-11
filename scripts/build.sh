@@ -4,7 +4,7 @@
 disableSvelteServer
 
 # Run the SvelteKit build adapter
-npm run build
+pnpm run build
 
 # Reenable LSPs
 enableSvelteServer
