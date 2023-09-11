@@ -11,6 +11,9 @@
   },
   "type": "module",
   "devDependencies": {
+    "@replit-svelte/ui": "^1.4.5",
+    "@replit-svelte/utils": "^1.1.2",
+    "@replit/extensions": "^1.8.0",
     "@sveltejs/adapter-static": "^2.0.2",
     "@sveltejs/kit": "^1.21.0",
     "@types/cookie": "^0.5.1",
@@ -21,9 +24,6 @@
     "svelte-check": "^2.9.2",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3",
-    "vite": "^4.0.5",
-    "@replit-svelte/ui": "^1.4.2",
-    "@replit-svelte/utils": "^1.1.2",
-    "@replit/extensions": "^1.8.0"
+    "vite": "^4.0.5"
   }
 }

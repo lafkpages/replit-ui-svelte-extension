@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@replit-svelte/ui':
-    specifier: ^1.4.2
-    version: 1.4.4(svelte@3.59.2)
+    specifier: ^1.4.5
+    version: 1.4.5(svelte@3.59.2)
   '@replit-svelte/utils':
     specifier: ^1.1.2
     version: 1.1.2(svelte@3.59.2)
@@ -304,22 +304,22 @@ packages:
     resolution: {integrity: sha512-C16M+IYz0rgRhWZdCmK+h58JMv8vijAA61gmz2rspCSwKwzBebpdcsiUmwrtJRdphuY30i6BSLEOP8ppbNLyLg==}
     dev: true
 
-  /@replit-svelte/types@1.4.1(@replit-svelte/ui@1.4.4)(svelte@3.59.2):
+  /@replit-svelte/types@1.4.1(@replit-svelte/ui@1.4.5)(svelte@3.59.2):
     resolution: {integrity: sha512-mT53roQnoxH79zdlY5dJH55gbxw3ViBvevCI64ROm9sWX09vtWjaIA4j3MILH4HQpbQq77CzP85zXKx4LKvrkw==}
     peerDependencies:
       '@replit-svelte/ui': ^1.2.0
       svelte: ^3.59.2
     dependencies:
-      '@replit-svelte/ui': 1.4.4(svelte@3.59.2)
+      '@replit-svelte/ui': 1.4.5(svelte@3.59.2)
       svelte: 3.59.2
     dev: true
 
-  /@replit-svelte/ui@1.4.4(svelte@3.59.2):
-    resolution: {integrity: sha512-H+jmvcfD2ejFGcyW+klm8ObulJhNJArkgRGtSuglQtjBbyeZy480Xb7m8oGTVgrNTe4xSevGb2llSxTrpgQlVg==}
+  /@replit-svelte/ui@1.4.5(svelte@3.59.2):
+    resolution: {integrity: sha512-ly9qu9ho9wJLKpXfqbfVYJiqpNU7lA0VIoIcm55iumXxYqQs/UtI2gsGl5e0mKDv8zlr+K1UVu0jWB78GlOS5g==}
     peerDependencies:
       svelte: ^3.59.1
     dependencies:
-      '@replit-svelte/types': 1.4.1(@replit-svelte/ui@1.4.4)(svelte@3.59.2)
+      '@replit-svelte/types': 1.4.1(@replit-svelte/ui@1.4.5)(svelte@3.59.2)
       '@replit-svelte/utils': 1.1.2(svelte@3.59.2)
       svelte: 3.59.2
     dev: true
