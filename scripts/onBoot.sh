@@ -17,7 +17,8 @@ rm vite.config.js.timestamp-*
 if [ ! "$REPL_ID" = "a8014928-cebd-467c-8357-285415275aba" ]; then
   onForkScript="$REPL_HOME/scripts/onFork.sh"
   if [ -f "$onForkScript" ]; then
-    "$onForkScript"
-    rm "$onForkScript"
+    # Run the onFork script, and if it is
+    # successful, remove it
+    "$onForkScript" && rm "$onForkScript"
   fi
 fi
