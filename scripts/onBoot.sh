@@ -23,6 +23,6 @@ if [ ! "$REPL_ID" = "a8014928-cebd-467c-8357-285415275aba" ]; then
   if [ -f "$onForkScript" ]; then
     # Run the onFork script, and if it is
     # successful, remove it
-    "$onForkScript" && rm "$onForkScript"
+    "$onForkScript" yesplease && rm "$onForkScript"
   fi
 fi
