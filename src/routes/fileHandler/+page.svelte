@@ -1,9 +1,6 @@
 <script lang="ts">
   import Input from '@replit-svelte/ui/Input.svelte';
 
-  import { getContext } from 'svelte';
-  import type { FileHandlerPathStore } from '$lib/types';
-
   // File handler file path
   import { fileHandlerPath } from '$lib/stores';
 </script>
