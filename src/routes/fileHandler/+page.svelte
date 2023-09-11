@@ -8,6 +8,10 @@
   import { fileHandlerPath } from '$lib/stores';
 </script>
 
+<svelte:head>
+  <title>File handler demo - Replit UI Svelte Extension</title>
+</svelte:head>
+
 This is a file handler.
 
 {#if $fileHandlerPath}
