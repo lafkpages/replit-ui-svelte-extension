@@ -4,7 +4,7 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
+devDependencies:
   '@replit-svelte/ui':
     specifier: ^1.4.2
     version: 1.4.4(svelte@3.59.2)
@@ -14,8 +14,6 @@ dependencies:
   '@replit/extensions':
     specifier: ^1.8.0
     version: 1.8.0
-
-devDependencies:
   '@sveltejs/adapter-static':
     specifier: ^2.0.2
     version: 2.0.3(@sveltejs/kit@1.24.1)
@@ -54,7 +52,7 @@ packages:
 
   /@codemirror/state@6.2.1:
     resolution: {integrity: sha512-RupHSZ8+OjNT38zU9fKH2sv+Dnlr8Eb8sl4NOnnqz95mCFTZUaiRP8Xv5MeeaG0px2b8Bnfe7YGwCV3nsBhbuw==}
-    dev: false
+    dev: true
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
@@ -274,12 +272,12 @@ packages:
     resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
     dependencies:
       '@noble/hashes': 1.3.2
-    dev: false
+    dev: true
 
   /@noble/hashes@1.3.2:
     resolution: {integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==}
     engines: {node: '>= 16'}
-    dev: false
+    dev: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -314,7 +312,7 @@ packages:
     dependencies:
       '@replit-svelte/ui': 1.4.4(svelte@3.59.2)
       svelte: 3.59.2
-    dev: false
+    dev: true
 
   /@replit-svelte/ui@1.4.4(svelte@3.59.2):
     resolution: {integrity: sha512-H+jmvcfD2ejFGcyW+klm8ObulJhNJArkgRGtSuglQtjBbyeZy480Xb7m8oGTVgrNTe4xSevGb2llSxTrpgQlVg==}
@@ -324,7 +322,7 @@ packages:
       '@replit-svelte/types': 1.4.1(@replit-svelte/ui@1.4.4)(svelte@3.59.2)
       '@replit-svelte/utils': 1.1.2(svelte@3.59.2)
       svelte: 3.59.2
-    dev: false
+    dev: true
 
   /@replit-svelte/utils@1.1.2(svelte@3.59.2):
     resolution: {integrity: sha512-Wq5f6csySugXOUtpu25Sed15DRfmV63yD7/4CBOuZpbwetDAsXvvHZ250coQfkGL7ZJXe5LzZv4qkm/LVbWWqw==}
@@ -332,7 +330,7 @@ packages:
       svelte: ^3.59.2
     dependencies:
       svelte: 3.59.2
-    dev: false
+    dev: true
 
   /@replit/extensions@1.8.0:
     resolution: {integrity: sha512-LZOABPU5S+r+3/l6/8bChS7lAnqEjfjK+iYjrjaULbUHWtrXvmOLdvJhW6dCN300rlrNK4kz8cCNOvb+KTPV/A==}
@@ -342,17 +340,17 @@ packages:
       '@root/asn1': 1.0.0
       b64u-lite: 1.1.0
       comlink: 4.4.1
-    dev: false
+    dev: true
 
   /@root/asn1@1.0.0:
     resolution: {integrity: sha512-0lfZNuOULKJDJmdIkP8V9RnbV3XaK6PAHD3swnFy4tZwtlMDzLKoM/dfNad7ut8Hu3r91wy9uK0WA/9zym5mig==}
     dependencies:
       '@root/encoding': 1.0.1
-    dev: false
+    dev: true
 
   /@root/encoding@1.0.1:
     resolution: {integrity: sha512-OaEub02ufoU038gy6bsNHQOjIn8nUjGiLcaRmJ40IUykneJkIW5fxDqKxQx48cszuNflYldsJLPPXCrGfHs8yQ==}
-    dev: false
+    dev: true
 
   /@sveltejs/adapter-static@2.0.3(@sveltejs/kit@1.24.1):
     resolution: {integrity: sha512-VUqTfXsxYGugCpMqQv1U0LIdbR3S5nBkMMDmpjGVJyM6Q2jHVMFtdWJCkeHMySc6mZxJ+0eZK3T7IgmUCDrcUQ==}
@@ -466,13 +464,13 @@ packages:
     resolution: {integrity: sha512-aHe97M7DXt+dkpa8fHlCcm1CnskAHrJqEfMI0KN7dwqlzml/aUe1AGt6lk51HzrSfVD67xOso84sOpr+0wIe2w==}
     dependencies:
       base-64: 0.1.0
-    dev: false
+    dev: true
 
   /b64u-lite@1.1.0:
     resolution: {integrity: sha512-929qWGDVCRph7gQVTC6koHqQIpF4vtVaSbwLltFQo44B1bYUquALswZdBKFfrJCPEnsCOvWkJsPdQYZ/Ukhw8A==}
     dependencies:
       b64-lite: 1.4.0
-    dev: false
+    dev: true
 
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -480,7 +478,7 @@ packages:
 
   /base-64@0.1.0:
     resolution: {integrity: sha512-Y5gU45svrR5tI2Vt/X9GPd3L0HNIKzGu202EjxrXMpuc2V2CiKgemAbUUsqYmZJvPtCXoUKjNZwBJzsNScUbXA==}
-    dev: false
+    dev: true
 
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
@@ -540,7 +538,7 @@ packages:
 
   /comlink@4.4.1:
     resolution: {integrity: sha512-+1dlx0aY5Jo1vHy/tSsIGpSkN4tS9rZSW8FIhG0JH/crs9wwweswIo/POr451r7bZww3hFbPAKnTpimzL/mm4Q==}
-    dev: false
+    dev: true
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -1080,6 +1078,7 @@ packages:
   /svelte@3.59.2:
     resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
     engines: {node: '>= 8'}
+    dev: true
 
   /tiny-glob@0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
