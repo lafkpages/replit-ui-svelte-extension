@@ -7,6 +7,7 @@
 # the script will exit with a non-zero exit code
 set -o pipefail
 
+cd "$REPL_HOME"
 
 # Debug logs
 echo "1" > /tmp/_replit_ui_svelte_extension_forked
